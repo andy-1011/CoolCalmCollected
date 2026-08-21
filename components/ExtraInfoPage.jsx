@@ -9,10 +9,16 @@ export default function ExtraInfoPage({ setJailUnlocked, setDatingUnlocked, jail
   // Load real leaderboard from localStorage
   useEffect(() => {
     const fetchLeaderboard = () => {
+      // Define default members so the app never crashes
+      const defaultMembers = [
+        { username: "George", xp: 120 },
+        { username: "Andy", xp: 90 },
+        { username: "Jamie", xp: 60 }
+      ];
+
       // Mocking a few users plus checking local storage for current user
       const currentUser = JSON.parse(localStorage.getItem('ccc_current_user') || '{"username": "You (Not Logged In)", "xp": 0}');
       
-
       // Add or update current user in list
       const existingIndex = defaultMembers.findIndex(m => m.username === currentUser.username);
       if (existingIndex >= 0) {
@@ -95,7 +101,7 @@ export default function ExtraInfoPage({ setJailUnlocked, setDatingUnlocked, jail
 
       {/* Contact Info */}
       <div className="text-center text-xs text-slate-400">
-        <p>Contact / Support: andyroo_1011[cite: 1]</p>
+        <p>Contact / Support: andyroo_1011</p>
       </div>
     </div>
   );
