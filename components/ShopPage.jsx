@@ -17,8 +17,8 @@ export default function ShopPage() {
   }, []);
 
   const designs = [
-    { id: 1, name: "George with a bit of pozaz!", description: "Front chest fit", image: "/design1.png" },
-    { id: 2, name: "Love is in the air", description: "Front chest fit", image: "/design2.png" },
+    { id: 1, name: "George with a bit of pozaz!", description: "Front chest fit", image: "/design1.png.png" },
+    { id: 2, name: "Love is in the air", description: "Front chest fit", image: "/design2.png.png" },
     
     
     
@@ -98,7 +98,7 @@ export default function ShopPage() {
     setNewCommentInput(prev => ({ ...prev, [id]: '' }));
   };
 
-  let basePrice = 25.00;
+  let basePrice = 15.00;
   let displayPrice = basePrice;
   let isGeorge = currentUser.toLowerCase() === 'george';
   let isHarry = currentUser.toLowerCase() === 'harry';
