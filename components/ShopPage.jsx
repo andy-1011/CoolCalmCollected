@@ -32,7 +32,7 @@ export default function ShopPage() {
   const [reactions, setReactions] = useState(
     designs.reduce((acc, item) => ({
       ...acc,
-      [item.id]: { '😂': 2, '💀': 5, '😭': 1, '😡': 0, '👍': 10, '👎': 0 }
+      [item.id]: { '😂': 0, '💀': 0, '😭': 0, '😡': 0, '👍': 0, '👎': 0 }
     }), {})
   );
 
@@ -120,7 +120,7 @@ export default function ShopPage() {
 
       {isGeorge && (
         <div className="bg-green-500/20 border border-green-500 text-green-300 p-3 rounded-lg max-w-md mx-auto text-xs font-bold animate-pulse">
-          🎉 THE GEORGE SPECIAL: 99% OFF! 
+          🎉 GEORGE SPECIAL: 99% OFF! (You only pay the remaining 1%).
         </div>
       )}
 

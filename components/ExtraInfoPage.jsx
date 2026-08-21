@@ -12,13 +12,6 @@ export default function ExtraInfoPage({ setJailUnlocked, setDatingUnlocked, jail
       // Mocking a few users plus checking local storage for current user
       const currentUser = JSON.parse(localStorage.getItem('ccc_current_user') || '{"username": "You (Not Logged In)", "xp": 0}');
       
-      const defaultMembers = [
-        { username: 'Joel Big man', xp: 420 },
-        { username: 'Charlie apple', xp: 350 },
-        { username: 'Jamie', xp: 290 },
-        { username: 'Toby 1', xp: 210 },
-        { username: 'Toby 2', xp: 180 },
-      ];
 
       // Add or update current user in list
       const existingIndex = defaultMembers.findIndex(m => m.username === currentUser.username);
