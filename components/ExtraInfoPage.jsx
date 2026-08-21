@@ -95,7 +95,7 @@ export default function ExtraInfoPage({ setJailUnlocked, setDatingUnlocked, jail
 
       {/* Contact Info */}
       <div className="text-center text-xs text-slate-400">
-        <p>Contact / Support: groupchat@coolcalmcollected.co.uk[cite: 1]</p>
+        <p>Contact / Support: andyroo_1011[cite: 1]</p>
       </div>
     </div>
   );

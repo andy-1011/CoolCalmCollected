@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 export default function PhotoCarousel() {
   // Generic placeholder items (can be swapped with image URLs later)
   const slides = [
-    { id: 1, title: "[ Photo 1: The Icon ]" },
-    { id: 2, title: "[ Photo 2: Group Chat Legend ]" },
-    { id: 3, title: "[ Photo 3: Outtake ]" },
-    { id: 4, title: "[ Photo 4: Classic Bit ]" }
+    { id: 1, title: "[  ]" },
+    { id: 2, title: "[  ]" },
+    { id: 3, title: "[  ]" },
+    { id: 4, title: "[  ]" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

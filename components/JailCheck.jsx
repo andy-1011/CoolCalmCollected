@@ -17,8 +17,8 @@ export default function JailCheck() {
       return;
     }
 
-    if (y < 18 || h < 18) {
-      setResult('⚠️ Both ages need to be 18+ for this one.');
+    if (y < 0 || h < 18) {
+      setResult('⚠️ Both ages need to be 0+ for this one.');
       return;
     }
 
@@ -30,7 +30,7 @@ export default function JailCheck() {
       }
       setUses(1);
     } else {
-      setResult('Pay £9.99 to check again. (No real payment wired up yet!)');
+      setResult('Pay £999 to check again. (No real payment wired up yet!)');
     }
   };
 

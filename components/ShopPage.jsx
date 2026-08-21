@@ -17,11 +17,11 @@ export default function ShopPage() {
   }, []);
 
   const designs = [
-    { id: 1, name: "The Icon", description: "Front chest hit" },
-    { id: 2, name: "Big Mood", description: "Full back print" },
-    { id: 3, name: "Local Legend", description: "Varsity-style arch" },
-    { id: 4, name: "No Notes", description: "Small left-chest patch" },
-    { id: 5, name: "Main Character", description: "Oversized graphic" }
+    { id: 1, name: "George with a bit of pozaz!", description: "Front chest fit", image: "/design1.png" },
+    { id: 2, name: "Love is in the air", description: "Front chest fit", image: "/design2.png" },
+    
+    
+    
   ];
 
   const [selections, setSelections] = useState(
@@ -48,8 +48,7 @@ export default function ShopPage() {
     designs.reduce((acc, item) => ({
       ...acc,
       [item.id]: [
-        { username: 'Joel Big man', text: 'Absolute fire design!' },
-        { username: 'Charlie apple', text: 'Needs more music notes.' }
+       
       ]
     }), {})
   );
@@ -113,14 +112,14 @@ export default function ShopPage() {
 
   return (
     <div className="p-12 text-center text-white space-y-8 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold tracking-widest font-serif text-[#E8A93B]">OFFICIAL MERCH HUB</h2>
+      <h2 className="text-4xl font-bold tracking-widest font-serif text-[#E8A93B]">OFFICIAL GEORGE MERCH HUB</h2>
       <p className="text-slate-300 max-w-lg mx-auto text-sm">
-        Click emojis to react (limited to 1 per emoji, click again to toggle off).
+        
       </p>
 
       {isGeorge && (
         <div className="bg-green-500/20 border border-green-500 text-green-300 p-3 rounded-lg max-w-md mx-auto text-xs font-bold animate-pulse">
-          🎉 GEORGE SPECIAL: 99% OFF! (You only pay the remaining 1%).
+          🎉 GEORGE SPECIAL: 99% OFF! .
         </div>
       )}
 
@@ -153,11 +152,19 @@ export default function ShopPage() {
               </button>
 
               <div>
-                {/* T-Shirt Mockup */}
-                <div className={`h-48 rounded-lg mb-4 flex items-center justify-center border border-slate-500 transition-colors ${
+                {/* T-Shirt Mockup / Image Display */}
+                <div className={`h-48 rounded-lg mb-4 flex items-center justify-center border border-slate-500 transition-colors overflow-hidden relative ${
                   isWhite ? 'bg-white text-black' : 'bg-black text-white'
                 }`}>
-                  <span className="text-xs tracking-wider opacity-60">[ {design.name} Mockup ]</span>
+                  {design.image ? (
+                    <img 
+                      src={design.image} 
+                      alt={design.name} 
+                      className="max-h-full max-w-full object-contain p-2"
+                    />
+                  ) : (
+                    <span className="text-xs tracking-wider opacity-60">[ {design.name} Mockup ]</span>
+                  )}
                 </div>
 
                 <h3 className="font-bold text-lg">{design.name}</h3>
