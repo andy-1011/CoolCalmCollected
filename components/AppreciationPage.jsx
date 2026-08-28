@@ -32,4 +32,4 @@ export default function AppreciationPage() {
       </div>
     </div>
   );
-  
+}
